@@ -1,0 +1,165 @@
+.signup {
+  background: #f1f7fc;
+  padding: 15px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.signup__container {
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.1);
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    // height: 100vh;
+  }
+}
+
+.signup__left {
+  margin: 0 2.5px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background: #f7f7f7;
+
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100vh;
+    margin-bottom: 50px;
+  }
+
+  .signup__left-image {
+    display: table-cell;
+    width: 500px;
+    height: 400px;
+    align-self: center;
+    margin: 45px 10px 0 10px;
+    // background-size: cover;
+  }
+
+  .signup__left-text {
+    // width: ;
+    // height: ;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 0;
+
+    & h3 {
+      font-size: large;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    & p {
+      color: #928a7e;
+    }
+  }
+}
+
+.signup__form {
+  margin: 0 2.5px;
+  padding: 4rem;
+  height: 100%;
+  width: 50%;
+  background-color: #ffffff;
+
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100vh;
+    margin-top: 50px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  form {
+    width: 400px;
+    color: #505e6c;
+
+    // @media (max-width: 991px) {
+    //   padding: 40px;
+    // }
+
+    .form__control {
+      display: flex;
+      flex-direction: column;
+      margin: 5px auto;
+      // padding: 5px;
+
+      label {
+        margin: 3px 0;
+      }
+
+      .form__input {
+        background: transparent;
+        border: 1px solid #505e6c;
+        border-radius: 3px;
+        box-shadow: none;
+        outline: none;
+        color: inherit;
+        text-indent: 0;
+        height: 40px;
+        width: 100%;
+        margin: 5px 0;
+
+        &-error {
+          color: red;
+        }
+      }
+
+      .phone {
+        width: 50%;
+      }
+    }
+
+    .form__checkbox {
+      padding: 5px;
+      margin-top: 5px;
+      margin-bottom: 0;
+
+      label {
+        font-weight: bold;
+      }
+
+      .checkbox {
+        font-size: 13px;
+        line-height: 20px;
+        margin-right: 10px;
+      }
+    }
+
+    button {
+      background: rgb(40, 181, 237);
+      border: none;
+      border-radius: 4px;
+      padding: 11px;
+      box-shadow: none;
+      margin-top: 15px;
+      text-shadow: none;
+      outline: none !important;
+      color: #fff;
+      font-size: medium;
+      width: 60%;
+    }
+  }
+}
