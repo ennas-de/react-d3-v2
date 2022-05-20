@@ -6,17 +6,6 @@
     align-self: center;
     margin: 0 auto;
     width: 60%;
-    // background: black;
-
-    // & .d3__heading {
-    //   width: 20%;
-    //   align-items: center;
-    //   text-align: center;
-    //   font-size: medium;
-    //   font-weight: bold;
-    //   margin: 0 auto;
-    //   padding-bottom: 1.2rem;
-    // }
 
     &.d3__chart {
       width: 20%;
@@ -33,11 +22,6 @@
 
     .d3 {
       width: 90%;
-
-      // & .d3__heading {
-      //   padding-top: 1.3rem;
-      //   width: 200px;
-      // }
 
       .d3__chart #chart {
         width: max-content;

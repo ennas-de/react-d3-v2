@@ -4,32 +4,32 @@ import IMG from "../../assets/mydash.png";
 
 import "./Signup.scss";
 
-const Signup = () => {
+const SignUp = () => {
   const [values, setValues] = useState({
     email: "",
-    fullname: "",
+    full__name: "",
     phone: "",
     password: "",
-    confirmPass: "",
+    confirm__password: "",
   });
 
   const [validations, setValidations] = useState({
     email: "",
-    fullname: "",
+    full__name: "",
     phone: "",
     password: "",
-    confirmPass: "",
+    confirm__password: "",
   });
 
   const validateAll = () => {
-    const { email, fullname, phone, password, confirmPass } = values;
+    const { email, full__name, phone, password, confirm__password } = values;
 
     const validations = {
       email: "",
-      fullname: "",
+      full__name: "",
       phone: "",
       password: "",
-      confirmPass: "",
+      confirm__password: "",
     };
     let isValid = true;
 
@@ -53,23 +53,23 @@ const Signup = () => {
       isValid = false;
     }
 
-    if (!fullname) {
-      validations.fullname = "Full Name Is Required!";
+    if (!full__name) {
+      validations.full__name = "Full Name Is Required!";
       isValid = false;
     }
 
     if (!password) {
-      validations.fullname = "Password Is Required!";
+      validations.password = "Password Is Required!";
       isValid = false;
     }
 
-    if (!confirmPass) {
-      validations.fullname = "Re-Enter Your Password!";
+    if (!confirm__password) {
+      validations.confirm__password = "Re-Enter Your Password!";
       isValid = false;
     }
 
-    if (password !== confirmPass) {
-      validations.confirmPass = "The Two Passwords Do Not Match!";
+    if (password !== confirm__password) {
+      validations.confirm__password = "The Two Passwords Do Not Match!";
       isValid = false;
     }
 
@@ -107,22 +107,22 @@ const Signup = () => {
     if (!validations) window.location.replace("/home");
   };
 
-  const { email, fullname, phone, password, confirmPass } = values;
+  const { email, full__name, phone, password, confirm__password } = values;
 
   const {
     email: emailVal,
-    fullname: fullnameVal,
+    full__name: full__nameVal,
     phone: phoneVal,
     password: passwordVal,
-    confirmPass: confirmPassVal,
+    confirm__password: confirm__passwordVal,
   } = validations;
 
   return (
-    <section className="signup">
-      <div className="signup__container">
-        <div className="signup__left">
-          <img src={IMG} alt="side" className="signup__left-image" />
-          <div className="signup__left-text">
+    <section className="signUp">
+      <div className="signUp__container">
+        <div className="signUp__left">
+          <img src={IMG} alt="side" className="signUp__left-image" />
+          <div className="signUp__left-text">
             <h3>Choose a date range</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -131,7 +131,7 @@ const Signup = () => {
           </div>
         </div>
 
-        <div className="signup__form">
+        <div className="signUp__form">
           <h3>Create an account</h3>
 
           <form onSubmit={handleSubmit}>
@@ -165,27 +165,27 @@ const Signup = () => {
               <label htmlFor="confirm-password">Confirm your password</label>
               <input
                 type="password"
-                name="confirmPass"
+                name="confirm__password"
                 required
-                value={confirmPass}
+                value={confirm__password}
                 className="form__input"
                 onChange={handleChange}
                 onBlur={validateOne}
               />
-              <div className="form__input-error">{confirmPassVal}</div>
+              <div className="form__input-error">{confirm__passwordVal}</div>
             </div>
             <div className="form__control">
               <label htmlFor="full__name">Your full name</label>
               <input
                 type="text"
-                name="fullname"
+                name="full__name"
                 className="form__input"
                 required
-                value={fullname}
+                value={full__name}
                 onChange={handleChange}
                 onBlur={validateOne}
               />
-              <div className="form__input-error">{fullnameVal}</div>
+              <div className="form__input-error">{full__nameVal}</div>
             </div>
             <div className="form__control">
               <label htmlFor="phone">Your phone number</label>
@@ -200,14 +200,14 @@ const Signup = () => {
               />
               <div className="form__input-error">{phoneVal}</div>
             </div>
-            <div className="form__checkbox">
+            <div className="form__checkBox">
               <input
-                type="checkbox"
-                name="checkbox"
-                className="checkbox"
+                type="checkBox"
+                name="checkBox"
+                className="checkBox"
                 required
               />
-              <label htmlFor="checkbox">
+              <label htmlFor="checkBox">
                 I read and agree to Terms and Conditions
               </label>
             </div>
@@ -221,4 +221,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignUp;
